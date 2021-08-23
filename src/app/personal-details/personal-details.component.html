@@ -1,0 +1,64 @@
+<form [formGroup]= "personalForm"  class=" border border-light p-5">
+
+    <div class="form-row mb-4">
+        <label>Full Name</label>
+        <div class="col">
+            <input  formControlName="fullName" type="text" id="FormFullName" class="form-control" required>
+        </div>
+    </div>
+
+  <div class="form-row mb-4">
+  <label>Gender</label>
+  <div>
+        <button (click)= "gender('Male')" class="btn focus" type="button"> Male </button>
+        <button (click)= "gender('Female')" class="btn focus" type="button"> Female </button>
+        <button (click)= "gender('Others')" class="btn focus" type="button"> Others </button>
+    </div>
+  </div>
+  <div class="form-row mb-4">
+  <label>Country</label>
+  <div class="row">
+    <div class="col-md-3">
+      <select style="border-right: none;" (change)= "selectcountry($event.target.value)" class="form-control" aria-label="Default select example" disabled>
+    
+        <option   selected>{{countrySh}}</option>
+      </select>
+    </div>
+    <div class="col-md-9" style="margin-left: -28px">
+      <select  style="border-left: none; width: 308px;" (change)= "selectcountry($event.target.value)" class="form-control" aria-label="Default select example" >
+    
+        <option *ngFor="let count of country" [value]="count.name">{{ count.name }}</option>
+     </select>
+    </div>
+  </div>
+  
+  </div>
+
+  <div class="form-row mb-4">
+  <label>State</label>
+        <input  formControlName="state" type="text" class="form-control" required>
+  
+  </div>
+
+  <div class="form-row mb-4">
+  <label>Phone</label>
+  <div class="row">
+    <div class="col-md-3">
+      <select style="border-right: none;" (change)= "selectstate($event.target.value)" class="form-control" aria-label="Default select example">
+        <option>{{ code }}</option>
+      </select>
+    </div>
+    <div class="col-md-9" style="margin-left: -28px">
+      <input formControlName="phoneNumber" style="border-left: none; width: 308px;" type="text" id="FormPhone" class="form-control">
+    </div>
+  </div>
+  </div>
+
+  <div class="col-md-12">
+  <button (click)= "next()" type="button" [disabled]="personalForm.invalid" style="width: 100%; background-color:#ff7700; border: none; color: white; padding: 5px;">Next</button>
+  </div>
+
+  <p class="text-center mt-3">Already have an account?</p>
+  <p class="text-center">  <span class="text-danger">Log in </span></p>
+  
+  

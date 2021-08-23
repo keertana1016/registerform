@@ -1,0 +1,25 @@
+.form-control:focus {
+    border-color: hsl(41, 96%, 50%);
+    box-shadow: 0 0 0 0.5px rgb(255 211 49 / 75%); 
+}
+.container
+{
+ width: 500px;
+  margin: 30px auto;
+  background: #fff;
+  position: relative;
+ }  
+ .container h1 
+ {
+   margin: 0;
+   padding: 0;
+   font-family: arial;
+   font-size: 1em;
+   text-transform: uppercase;
+   text-align: center;
+   position: relative;
+   top: 50%;
+   color:rgb(15, 15, 3);
+   transform: translate(-50%);
+
+ }

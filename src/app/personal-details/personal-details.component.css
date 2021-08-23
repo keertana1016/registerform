@@ -1,0 +1,17 @@
+.form-control:focus {
+    border-color: #ff7700;
+    box-shadow: 0 0 0 0.5px rgb(255 211 49 / 75%); 
+} 
+.focus:focus {
+    background-color:#f7ccba ;
+}
+.focus{
+    color: #ff7700;
+    border: none;
+    outline: none;   
+    box-shadow: 0 0 0 0px rgb(255 211 49 / 75%); 
+}
+.focus:active{
+    color: #ff7700;
+    background-color:#f7ccba ;
+}
